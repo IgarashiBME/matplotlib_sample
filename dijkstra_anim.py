@@ -60,14 +60,7 @@ def update(i):
         node_size=200)
     plt.axis('equal')
 
-#for i in ans_route:
-#    print i
-#    if rm_node[i] != 1:
-#        graph.node[i]['color'] = 'blue'
-#    else:
-#        print("not found")
-#        break
-
 fig = plt.figure(figsize=(10,10))
-anim = animation.FuncAnimation(fig, update, frames=len(ans_route), interval=50)    
-plt.show()
+anim = animation.FuncAnimation(fig, update, frames=len(ans_route), interval=50)
+anim.save('demoanimation.gif', writer='imagemagick', fps=4)    
+#plt.show()
