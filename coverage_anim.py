@@ -6,7 +6,7 @@ import networkx as nx
 import time
 from matplotlib import animation
 
-#1が入るノード（黒色）にウェイトを掛けて壁化
+#8が入るノード（黒色）にウェイトを掛けて壁化
 
 rm_node = np.array(
     [[8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8],
@@ -111,7 +111,7 @@ while True:
 
 print coverage_path
 
-#最短ルートを青色で図示
+#coverage_pathを青色で図示
 def update(i): 
     print i, coverage_path[i]
     if rm_node[coverage_path[i]] != 1:
